@@ -9,7 +9,7 @@ import Login from '../pages/login/index'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Homes() {
   return (
     <>
     

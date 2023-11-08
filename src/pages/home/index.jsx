@@ -1,9 +1,15 @@
-export default function Homef(){
+import Layout from '../../components/index';
+
+export default function HomePage(){
     return(
-        <>
-        <h2>
+      
+         <Layout>
+      {/* Conteúdo específico da página inicial */}
+      <h2>
             tela principal Home
         </h2>
-        </>
+    </Layout>
+        
+     
     )
 }
