@@ -6,3 +6,17 @@
 .headerNavBar{
     box-shadow: 3px 0px 3px 0px #949393;
 }
+
+.iconeNotificacao{
+    font-size: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.iconeNotificacao:hover{
+    color: #198754;
+}
+
+.menuDrop{
+    margin-left: -80px;
+}

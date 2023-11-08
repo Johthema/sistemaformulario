@@ -1,3 +1,4 @@
+//Imports para a biblioteca react bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import '../../styles/globals.css'
 import Button from 'react-bootstrap/Button';
@@ -6,9 +7,16 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Style from './header.module.css'
+import Style from './header.module.css';
+import { FaEnvelope } from "react-icons/fa6";
+import Dropdown from 'react-bootstrap/Dropdown';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 export default function Header(){
+
+
+
     return(
         <>
             <Navbar expand="lg" className={Style.headerNavBar}>
@@ -37,15 +45,27 @@ export default function Header(){
               Link
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          
+           
+    <FaEnvelope className={Style.iconeNotificacao} Tootlip="Notificações"/>
+            
+            
+            {/* <Button variant="outline-success">Menu</Button> */}
+
+            <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                Menu
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu className={Style.menuDrop} >
+                <Dropdown.Item href="#/action-1">Perfil</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Configurações</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Sair</Dropdown.Item>
+            </Dropdown.Menu>
+            </Dropdown>
+
+            
+      
         </Navbar.Collapse>
       </Container>
     </Navbar>
