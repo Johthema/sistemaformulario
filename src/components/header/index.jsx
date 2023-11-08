@@ -24,7 +24,7 @@ export default function Header(){
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
+          {/* <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll
@@ -44,9 +44,9 @@ export default function Header(){
             <Nav.Link href="#" disabled>
               Link
             </Nav.Link>
-          </Nav>
+          </Nav> */}
           
-           
+           <div className={Style.divIconesMenu}>
     <FaEnvelope className={Style.iconeNotificacao} Tootlip="Notificações"/>
             
             
@@ -64,7 +64,7 @@ export default function Header(){
             </Dropdown.Menu>
             </Dropdown>
 
-            
+            </div>
       
         </Navbar.Collapse>
       </Container>

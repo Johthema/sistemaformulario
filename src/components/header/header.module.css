@@ -20,3 +20,8 @@
 .menuDrop{
     margin-left: -80px;
 }
+
+.divIconesMenu{
+    display: flex;
+    margin-inline-start: auto;
+}
