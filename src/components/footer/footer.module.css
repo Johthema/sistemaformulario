@@ -1,0 +1,10 @@
+.divFooter{
+    background-color: black;
+    color: #fff;
+    height: 100px;
+    width: 100vw;
+    margin-bottom: 0px;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+}

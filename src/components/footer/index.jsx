@@ -1,5 +1,9 @@
+import Style from './footer.module.css'
+
 export default function Footer(){
     return (
-        <h2>----Rodapé-------</h2>
+        <div className={Style.divFooter}>
+
+        </div>
     )
 }

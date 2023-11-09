@@ -21,7 +21,7 @@ export default function Header(){
         <>
             <Navbar expand="lg" className={Style.headerNavBar}>
       <Container fluid>
-        <Navbar.Brand href="#" className={Style.headerIconeLogo}>Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#" className={Style.headerIconeLogo}>Nome do usuario logado</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           {/* <Nav
