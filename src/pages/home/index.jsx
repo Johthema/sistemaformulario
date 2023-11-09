@@ -5,8 +5,31 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaEdit,  FaFileExport, FaFileInvoice } from 'react-icons/fa';
 import { FaFileCirclePlus, FaEnvelopesBulk, FaUsers } from "react-icons/fa6";
+import { useRouter } from "next/router"
 
 export default function HomePage(){
+
+    const router = useRouter();
+
+    function Opcoes(item){
+        if(item == 1){
+            router.push('/formularios/cadastro')
+
+        }
+        if(item == 2){
+            router.push('/formularios/lista')
+
+        }
+        if(item == 3){
+            router.push('/modelos')
+
+        }
+        if(item == 4){
+            router.push('/contatos')
+
+        }
+      }
+
     return(
       
         <Layout>
@@ -20,7 +43,7 @@ export default function HomePage(){
                     <Card.Text>
                         <FaFileCirclePlus className={Style.iconeCard}/>
                     </Card.Text>
-                    <Button variant="primary">Criar</Button>
+                    <Button variant="primary" onClick={()=>Opcoes(1)}>Criar</Button>
                 </Card.Body>
             </Card>
 
@@ -31,7 +54,7 @@ export default function HomePage(){
                     <Card.Text>
                    <FaFileExport className={Style.iconeCard} />
                     </Card.Text>
-                    <Button variant="primary">Visualizar</Button>
+                    <Button variant="primary" onClick={()=>Opcoes(2)}>Visualizar</Button>
                 </Card.Body>
             </Card>
              
@@ -46,7 +69,7 @@ export default function HomePage(){
         <Card.Text>
       <FaFileInvoice className={Style.iconeCard}/>
         </Card.Text>
-        <Button variant="primary">Visualizar</Button>
+        <Button variant="primary" onClick={()=>Opcoes(3)}>Visualizar</Button>
     </Card.Body>
     </Card>
 
@@ -57,7 +80,7 @@ export default function HomePage(){
         <Card.Text>
       <FaUsers className={Style.iconeCard}/>
         </Card.Text>
-        <Button variant="primary">Visualizar</Button>
+        <Button variant="primary" onClick={()=>Opcoes(4)}>Visualizar</Button>
     </Card.Body>
     </Card>
         
