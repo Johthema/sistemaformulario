@@ -12,7 +12,7 @@ export default function HomePage(){
             <div className={Style.divBlocos}>
                   {/*--------------------- Bloco horizontal 1 ---------------------*/}
             <div className={Style.divBlocoHorizontal}>
-            <Card style={{ width: '18rem' }} className={Style.card1}>
+            <Card style={{ width: '18rem' }} className={`${Style.card1} ${Style.cardPadrao}`}>
      
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
@@ -24,7 +24,7 @@ export default function HomePage(){
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }} className={Style.card2}>
+            <Card style={{ width: '18rem' }}  className={`${Style.card2} ${Style.cardPadrao}`}>
      
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
@@ -40,7 +40,7 @@ export default function HomePage(){
            {/*--------------------- Bloco horizontal 2 ---------------------*/}
             <div className={Style.divBlocoHorizontal}>
 
-            <Card style={{ width: '18rem' }} className={Style.card3}>
+            <Card style={{ width: '18rem' }}  className={`${Style.card3} ${Style.cardPadrao}`}>
      
      <Card.Body>
         <Card.Title>Card Title</Card.Title>
@@ -52,7 +52,7 @@ export default function HomePage(){
     </Card.Body>
     </Card>
 
-    <Card style={{ width: '18rem' }} className={Style.card4}>
+    <Card style={{ width: '18rem' }}  className={`${Style.card4} ${Style.cardPadrao}`}>
      
      <Card.Body>
         <Card.Title>Card Title</Card.Title>
