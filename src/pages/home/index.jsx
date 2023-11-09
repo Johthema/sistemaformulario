@@ -39,7 +39,7 @@ export default function HomePage(){
             <Card style={{ width: '18rem' }} className={`${Style.card1} ${Style.cardPadrao}`}>
      
                 <Card.Body>
-                    <Card.Title>Criar formulario</Card.Title>
+                    <Card.Title>Formulário</Card.Title>
                     <Card.Text>
                         <FaFileCirclePlus className={Style.iconeCard}/>
                     </Card.Text>
@@ -50,7 +50,7 @@ export default function HomePage(){
             <Card style={{ width: '18rem' }}  className={`${Style.card2} ${Style.cardPadrao}`}>
      
                 <Card.Body>
-                    <Card.Title className={Style.tituloCard}>Formularios enviados</Card.Title>
+                    <Card.Title className={Style.tituloCard}>Enviados</Card.Title>
                     <Card.Text>
                    <FaFileExport className={Style.iconeCard} />
                     </Card.Text>
