@@ -23,11 +23,11 @@
 }
 
 .botaoMenu{
-    background-color: #FFC53D;
+    background-color: #FFC53D !important;
     color: #000
 }
 .botaoMenu:hover{
-    background-color: #c7992f;
+    background-color: #c7992f !important;
     --bs-btn-border-color: #c7992f;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #c7992f;

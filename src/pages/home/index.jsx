@@ -3,7 +3,8 @@ import Layout from '../../components/index';
 import Style from './home.module.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import { FaEdit,  FaFileExport, FaFileInvoice } from 'react-icons/fa';
+import { FaFileCirclePlus, FaEnvelopesBulk, FaUsers } from "react-icons/fa6";
 
 export default function HomePage(){
     return(
@@ -17,8 +18,7 @@ export default function HomePage(){
                 <Card.Body>
                     <Card.Title>Criar formulario</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                        <FaFileCirclePlus className={Style.iconeCard}/>
                     </Card.Text>
                     <Button variant="primary">Criar</Button>
                 </Card.Body>
@@ -27,10 +27,9 @@ export default function HomePage(){
             <Card style={{ width: '18rem' }}  className={`${Style.card2} ${Style.cardPadrao}`}>
      
                 <Card.Body>
-                    <Card.Title>Formularios enviados</Card.Title>
+                    <Card.Title className={Style.tituloCard}>Formularios enviados</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                   <FaFileExport className={Style.iconeCard} />
                     </Card.Text>
                     <Button variant="primary">Visualizar</Button>
                 </Card.Body>
@@ -43,10 +42,9 @@ export default function HomePage(){
             <Card style={{ width: '18rem' }}  className={`${Style.card3} ${Style.cardPadrao}`}>
      
      <Card.Body>
-        <Card.Title>Modelos</Card.Title>
+        <Card.Title className={Style.tituloCard}>Modelos</Card.Title>
         <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
+      <FaFileInvoice className={Style.iconeCard}/>
         </Card.Text>
         <Button variant="primary">Visualizar</Button>
     </Card.Body>
@@ -55,10 +53,9 @@ export default function HomePage(){
     <Card style={{ width: '18rem' }}  className={`${Style.card4} ${Style.cardPadrao}`}>
      
      <Card.Body>
-        <Card.Title>Contatos</Card.Title>
+        <Card.Title className={Style.tituloCard}>Coletadores</Card.Title>
         <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
+      <FaUsers className={Style.iconeCard}/>
         </Card.Text>
         <Button variant="primary">Visualizar</Button>
     </Card.Body>
