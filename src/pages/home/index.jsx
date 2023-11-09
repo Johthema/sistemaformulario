@@ -25,7 +25,7 @@ export default function HomePage(){
 
         }
         if(item == 4){
-            router.push('/contatos')
+            router.push('/coletores')
 
         }
       }

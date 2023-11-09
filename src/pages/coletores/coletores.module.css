@@ -1,0 +1,25 @@
+.divCards{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    
+}
+.CardPadrao{
+    height: 250px;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.CardPadrao:hover{
+    box-shadow: 2px 0px 5px 0px #bbbbbb;
+    color:#0d6efd;
+    border: solid 1px #0d6efd;
+}
+
+.iconeCard{
+    font-size: 5rem;
+}
