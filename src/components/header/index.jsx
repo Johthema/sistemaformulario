@@ -12,16 +12,20 @@ import { FaEnvelope } from "react-icons/fa6";
 import Dropdown from 'react-bootstrap/Dropdown';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import { useRouter } from "next/router";
 
 export default function Header(){
-
+  const router = useRouter();
+  function Opcoes(item){
+    
+  }
 
 
     return(
         <>
             <Navbar expand="lg" className={Style.headerNavBar}>
       <Container fluid>
-        <Navbar.Brand href="#" className={Style.headerIconeLogo}>Nome do usuario logado</Navbar.Brand>
+        <Navbar.Brand href="/home" className={Style.headerIconeLogo}>Nome do usuario logado</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           {/* <Nav
