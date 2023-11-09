@@ -6,7 +6,18 @@ import { FaEdit,  FaFileExport, FaFileInvoice, FaUserPlus } from 'react-icons/fa
 import { FaFileCirclePlus, FaEnvelopesBulk, FaUsers, FaUsersGear } from "react-icons/fa6";
 import { useRouter } from "next/router"
 
-export default function Coletores(){
+export default function Coletadores(){
+
+    const router = useRouter();
+
+    function Opcoes(item){
+        if(item == 1){
+            router.push('./coletores/cadastro')
+
+        }
+    }
+
+
     return(
         <Layout>
         <div className={Style.divCards}>
@@ -22,23 +33,23 @@ export default function Coletores(){
         </Card> */}
 
 
-        <Card style={{ width: '18rem' }} className={Style.CardPadrao}>
+        <Card style={{ width: '18rem' }} className={Style.CardPadrao} onClick={()=>Opcoes(1)}>
         <Card.Body>
-            <Card.Title>Coletadores</Card.Title>
+            <Card.Title>Cadastrar Coletadores</Card.Title>
             <Card.Text>
            <FaUserPlus className={Style.iconeCard}/>
             </Card.Text>
-            <Button variant="primary">Cadastrar</Button>
+            <Button variant="primary" onClick={()=>Opcoes(1)}>Cadastrar</Button>
         </Card.Body>
         </Card>
 
         <Card style={{ width: '18rem' }} className={Style.CardPadrao}>
         <Card.Body>
-            <Card.Title>Lista de coletadores</Card.Title>
+            <Card.Title>Gerenciar coletadores</Card.Title>
             <Card.Text>
           <FaUsersGear className={Style.iconeCard}/>
             </Card.Text>
-            <Button variant="primary">Visualizar</Button>
+            <Button variant="primary"  onClick={()=>Opcoes(2)}>Visualizar</Button>
         </Card.Body>
         </Card>
         </div>
