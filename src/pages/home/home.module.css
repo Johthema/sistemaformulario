@@ -6,6 +6,11 @@
     /* height: 100vh; */
    
 }
+@media (max-width:600px) {
+    .divBlocos{
+        display: flow;
+    }
+}
 .divBlocoHorizontal{
     display: flex;
    height: 250px;
