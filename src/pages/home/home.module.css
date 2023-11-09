@@ -1,0 +1,40 @@
+.divBlocos{
+    justify-content: center;
+    margin: auto;
+    display: grid;
+    margin-top: 50px;
+}
+.divBlocoHorizontal{
+    display: flex;
+}
+
+/*------------Cards-----------*/
+.card1{
+    border-left: solid 1px #f9f9f9;
+    border-top: solid 1px #f9f9f9;
+    box-shadow: none;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
+}
+.card2{
+    border-left: solid 1px #000;
+    border-top: solid 1px #f9f9f9;
+    box-shadow: none;
+    border-right: solid 1px #f9f9f9;
+    border-bottom: solid 1px #000;
+}
+.card3{
+    border-left: solid 1px #f9f9f9;
+    border-top: solid 1px #000;
+    box-shadow: none;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #f9f9f9;
+}
+.card4{
+    border-left: solid 1px #000;
+    border-top: solid 1px #000;
+    box-shadow: none;
+    border-right: solid 1px #f9f9f9;
+    border-bottom: solid 1px #f9f9f9;
+}
+
