@@ -80,7 +80,7 @@ export default function HomePage(){
         <Card.Text>
       <FaUsers className={Style.iconeCard}/>
         </Card.Text>
-        <Button variant="primary" onClick={()=>Opcoes(4)}>Visualizar</Button>
+        <Button variant="primary" onClick={()=>Opcoes(4)}>Criar</Button>
     </Card.Body>
     </Card>
         
