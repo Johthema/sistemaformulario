@@ -20,6 +20,13 @@ export default function Coletadores(){
 
     return(
         <Layout>
+            
+            <div className={Style.divFundoColetadores}>
+                <div className={Style.divLateral}>
+
+                </div>
+
+          
         <div className={Style.divCards}>
         {/* <Card style={{ width: '18rem' }} className={Style.CardPadrao}>
         <Card.Body>
@@ -52,6 +59,7 @@ export default function Coletadores(){
             <Button variant="primary"  onClick={()=>Opcoes(2)}>Visualizar</Button>
         </Card.Body>
         </Card>
+        </div>
         </div>
         </Layout>
     )
