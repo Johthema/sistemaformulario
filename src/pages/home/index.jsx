@@ -76,11 +76,11 @@ export default function HomePage(){
     <Card style={{ width: '18rem' }}  className={`${Style.card4} ${Style.cardPadrao}`}>
      
      <Card.Body>
-        <Card.Title className={Style.tituloCard}>Coletadores</Card.Title>
+        <Card.Title className={Style.tituloCard}>Coletadores/Dados</Card.Title>
         <Card.Text>
       <FaUsers className={Style.iconeCard}/>
         </Card.Text>
-        <Button variant="primary" onClick={()=>Opcoes(4)}>Criar</Button>
+        <Button variant="primary" onClick={()=>Opcoes(4)}>Gerir</Button>
     </Card.Body>
     </Card>
         
