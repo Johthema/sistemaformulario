@@ -21,7 +21,7 @@ export default function Header(){
         <>
             <Navbar expand="lg" className={Style.headerNavBar}>
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#" className={Style.headerIconeLogo}>Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           {/* <Nav
@@ -53,7 +53,7 @@ export default function Header(){
             {/* <Button variant="outline-success">Menu</Button> */}
 
             <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown.Toggle variant="success" id="dropdown-basic" className={Style.botaoMenu}>
                 Menu
             </Dropdown.Toggle>
 

@@ -1,6 +1,11 @@
 .headerNavBar{
-    background-color: #fff;
+    background-color: #0090FF;
+    color:#fff
     /* border-bottom: solid 1px #fff; */
+}
+
+.headerIconeLogo{
+    color:#fff
 }
 
 .headerNavBar{
@@ -14,7 +19,28 @@
 }
 
 .iconeNotificacao:hover{
-    color: #198754;
+    color: #FFC53D;
+}
+
+.botaoMenu{
+    background-color: #FFC53D;
+    color: #000
+}
+.botaoMenu:hover{
+    background-color: #c7992f;
+    --bs-btn-border-color: #c7992f;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #c7992f;
+    --bs-btn-hover-border-color: #c7992f;
+    --bs-btn-active-bg: #c7992f;
+    --bs-btn-active-border-color: #c7992f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #c7992f;
+    --bs-btn-disabled-border-color: #c7992f;
+
+
+   
 }
 
 .menuDrop{
