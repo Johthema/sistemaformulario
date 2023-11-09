@@ -3,9 +3,12 @@
     margin: auto;
     display: grid;
     margin-top: 50px;
+    /* height: 100vh; */
+   
 }
 .divBlocoHorizontal{
     display: flex;
+   height: 250px;
 }
 
 /*------------Cards-----------*/
@@ -16,6 +19,8 @@
     box-shadow: none;
     border-right: solid 1px #0d6efd;
     border-bottom: solid 1px #0d6efd;
+    height: 100%;
+    width: 100%;
 }
 .card2{
     background-color: #f9f9f9;
@@ -24,6 +29,8 @@
     box-shadow: none;
     border-right: solid 1px #f9f9f9;
     border-bottom: solid 1px #0d6efd;
+    height: 100%;
+    width: 100%;
 }
 .card3{
     background-color: #f9f9f9;
@@ -32,6 +39,8 @@
     box-shadow: none;
     border-right: solid 1px #0d6efd;
     border-bottom: solid 1px #f9f9f9;
+    height: 100%;
+    width: 100%;
 }
 .card4{
     background-color: #f9f9f9;
@@ -40,6 +49,8 @@
     box-shadow: none;
     border-right: solid 1px #f9f9f9;
     border-bottom: solid 1px #f9f9f9;
+    height: 100%;
+    width: 100%;
 }
 
 .cardPadrao:hover{
@@ -50,5 +61,7 @@
     z-index: 2;
     border: transparent;
     box-shadow: 2px 0px 5px 0px #bbbbbb;
+    height: 100%;
+    width: 100%;
 }
 
