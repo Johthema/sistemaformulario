@@ -15,7 +15,7 @@ export default function HomePage(){
             <Card style={{ width: '18rem' }} className={`${Style.card1} ${Style.cardPadrao}`}>
      
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>Criar formulario</Card.Title>
                     <Card.Text>
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
@@ -27,7 +27,7 @@ export default function HomePage(){
             <Card style={{ width: '18rem' }}  className={`${Style.card2} ${Style.cardPadrao}`}>
      
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>Formularios enviados</Card.Title>
                     <Card.Text>
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
@@ -43,7 +43,7 @@ export default function HomePage(){
             <Card style={{ width: '18rem' }}  className={`${Style.card3} ${Style.cardPadrao}`}>
      
      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Modelos</Card.Title>
         <Card.Text>
         Some quick example text to build on the card title and make up the
         bulk of the card's content.
@@ -55,7 +55,7 @@ export default function HomePage(){
     <Card style={{ width: '18rem' }}  className={`${Style.card4} ${Style.cardPadrao}`}>
      
      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Contatos</Card.Title>
         <Card.Text>
         Some quick example text to build on the card title and make up the
         bulk of the card's content.
