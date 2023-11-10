@@ -76,7 +76,7 @@ export default function HomePage(){
     <Card style={{ width: '18rem' }}  className={`${Style.card4} ${Style.cardPadrao}`}>
      
      <Card.Body>
-        <Card.Title className={Style.tituloCard}>Coletadores/Dados</Card.Title>
+        <Card.Title className={Style.tituloCard}>Pesquisador/Entrevistados</Card.Title>
         <Card.Text>
       <FaUsers className={Style.iconeCard}/>
         </Card.Text>

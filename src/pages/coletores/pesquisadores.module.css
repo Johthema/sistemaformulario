@@ -32,3 +32,26 @@
 .iconeCard{
     font-size: 6rem;
 }
+.divPercentual{
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    color: #0d6efd;
+}
+.percentual{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: solid 3px #0d6efd;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    color:rgb(92, 92, 92);
+}
+.legendaPercentual{
+    padding-top: -5px;
+    font-size: 14px;
+}

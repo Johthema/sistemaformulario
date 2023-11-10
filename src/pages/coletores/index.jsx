@@ -1,12 +1,12 @@
 import Layout from '../../components/index';
-import Style from './coletores.module.css'
+import Style from './pesquisadores.module.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaEdit,  FaFileExport, FaFileInvoice, FaUserPlus, FaUsersCog } from 'react-icons/fa';
 import { FaFileCirclePlus, FaEnvelopesBulk, FaUsers, FaUsersGear, FaUsersLine } from "react-icons/fa6";
 import { useRouter } from "next/router"
 
-export default function Coletadores(){
+export default function Pesquisadores(){
 
     const router = useRouter();
 
@@ -23,6 +23,20 @@ export default function Coletadores(){
             
             <div className={Style.divFundoColetadores}>
                 <div className={Style.divLateral}>
+                    <div className={Style.divPercentual}>
+                        <h4>Dados coletados</h4>
+                        <div className={Style.percentual}>
+                            <h2>50%</h2>
+                            <h5 className={Style.legendaPercentual}>5/10</h5>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                        <h5>Total de pesquisadores</h5>
+                        <h5>Total de entrevistados</h5>
+                        <h5>Total de entrevistas pendentes</h5>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -42,7 +56,7 @@ export default function Coletadores(){
 
         <Card style={{ width: '18rem' }} className={Style.CardPadrao} onClick={()=>Opcoes(1)}>
         <Card.Body>
-            <Card.Title>Cadastrar Coletadores</Card.Title>
+            <Card.Title>Cadastrar Pesquisador</Card.Title>
             <Card.Text>
            <FaUserPlus className={Style.iconeCard}/>
             </Card.Text>
@@ -52,7 +66,7 @@ export default function Coletadores(){
 
         <Card style={{ width: '18rem' }} className={Style.CardPadrao}>
         <Card.Body>
-            <Card.Title>Gerenciar coletadores</Card.Title>
+            <Card.Title>Gerenciar pesquisadores</Card.Title>
             <Card.Text>
           <FaUsersCog className={Style.iconeCard}/>
             </Card.Text>
@@ -62,7 +76,7 @@ export default function Coletadores(){
 
         <Card style={{ width: '18rem' }} className={Style.CardPadrao}>
         <Card.Body>
-            <Card.Title>Gerenciar dados coletados</Card.Title>
+            <Card.Title>Gerenciar entrevistados</Card.Title>
             <Card.Text>
           <FaUsersLine className={Style.iconeCard}/>
             </Card.Text>
