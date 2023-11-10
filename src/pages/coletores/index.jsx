@@ -31,10 +31,10 @@ export default function Pesquisadores(){
                         </div>
                     </div>
                     <div>
-                        <div>
-                        <h5>Total de pesquisadores</h5>
-                        <h5>Total de entrevistados</h5>
-                        <h5>Total de entrevistas pendentes</h5>
+                        <div className={Style.divDados}>
+                        <h5 className={Style.fontDados}>Total de pesquisadores <span className={Style.dadosLegenda}>2</span></h5>
+                        <h5 className={Style.fontDados}>Total de entrevistados <span className={Style.dadosLegenda}>5</span></h5>
+                        <h5 className={Style.fontDados}>Total de entrevistas pendentes <span className={Style.dadosLegenda}>5</span></h5>
                         </div>
                     </div>
 
