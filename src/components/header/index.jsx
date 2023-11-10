@@ -64,7 +64,7 @@ export default function Header(){
             <Dropdown.Menu className={Style.menuDrop} >
                 <Dropdown.Item href="#/action-1">Perfil</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Configurações</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Sair</Dropdown.Item>
+                <Dropdown.Item href="/">Sair</Dropdown.Item>
             </Dropdown.Menu>
             </Dropdown>
 
