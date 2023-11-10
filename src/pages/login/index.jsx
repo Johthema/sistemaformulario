@@ -32,7 +32,7 @@ export default function Login(){
           <div className={Style.divCard}>
             <div className={Style.divFormEsq}>
               <div className={Style.cardFormEsq}>
-                <h1>Sistema de formulários de pesquisa</h1>
+                <h1>SiCoDa - sistema de Coleta de Dados</h1>
               </div>
                 
             </div>
