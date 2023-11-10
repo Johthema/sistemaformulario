@@ -30,7 +30,7 @@ export default function Login(){
   }
 
     return (
-        <>
+       
           <div className={Style.divCard}>
             <div className={Style.divFormEsq}>
               <div className={Style.cardFormEsq}>
@@ -40,9 +40,7 @@ export default function Login(){
             </div>
 
             <div className={Style.divFormDir}>
-              {/* <div className={transicao ? Style.cardFormDir : Style.cardFormDir2  }>
-                <Button className={Style.botaoDeEnviar} onClick={Logar}>Entrar</Button>
-              </div> */}
+           
                <Card className={transicao ? Style.cardFormDir : Style.cardFormDir2  }>
                 
                 <Card.Body>
@@ -52,7 +50,8 @@ export default function Login(){
                       <h4 className={Style.subtitulologin}>Se identifique para fazer login</h4>
                   </div>
                   <hr></hr>
-                  <Card.Text className={Style.entradaSenhaEmail}>
+
+                  <div className={Style.entradaSenhaEmail}>
 
                   <FloatingLabel
                     controlId="floatingInput"
@@ -66,7 +65,8 @@ export default function Login(){
                    <div className={Style.divEsqueciSenha}>
                       <span className={Style.spanEsquecisenha}>Esqueci senha</span>
                    </div>
-                  </Card.Text>
+                  </div>
+
                   <div className={Style.divBotaoEntrar}>
                     <Button variant="primary" onClick={Logar} className={Style.botaoEntrar}>Entrar</Button>
                   </div>
@@ -79,6 +79,6 @@ export default function Login(){
           </div>
 
        
-        </>
+       
     )
 }
