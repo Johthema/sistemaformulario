@@ -13,7 +13,7 @@ export default function Homes() {
   return (
     <>
     
-        <Theme>
+        <Theme className={styles.divFundoLogin}>
           <Login/>
         </Theme>
    

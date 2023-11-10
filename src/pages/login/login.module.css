@@ -2,3 +2,66 @@
     width: 20%;
     cursor: pointer;
 }
+
+.divCard{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.divFormEsq{
+width: 50%;
+display: flex;
+margin: auto;
+justify-content: center;
+}
+.divFormDir{
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.cardFormDir{
+    width: 400px;
+    height: 550px;
+    background-color: aliceblue;
+    justify-content: center;
+    margin: auto;
+}
+
+.cardFormEsq{
+    width: 600px;
+}
+
+
+/*Estilo do login logo*/
+
+.cardFormDir{
+    width: 400px;
+    height: 550px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-color: #0090FF; 
+    margin-left: -80px;
+    transform: translateX(40%);
+    transition:   transform 0.9s ease-in-out;
+    box-shadow: 3px 0px 7px 0px #2f2f2f;
+}
+.cardFormDir::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: -35px;
+    right: -45px;
+    width: 100px;
+    height: 80px;
+    transform: rotate(45deg);
+    background-color: #0090FF;
+    border-color: #0090FF;
+   
+   
+   
+}
