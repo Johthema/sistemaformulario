@@ -21,3 +21,11 @@
     transform: translatey(-40%);
     transition:   transform 0.9s ease-in-out;
 } 
+
+.divFormNome{
+    display: flex;
+}
+
+.botaoSeguir1{
+    margin-left: 10px;
+}
