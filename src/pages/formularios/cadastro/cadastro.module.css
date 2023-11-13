@@ -74,9 +74,9 @@ border-right: solid 1px #d8d8d8;
    
 }
 .quadradoOp:hover{
-    transform: scale(1.05);
+    /* transform: scale(1.05);
     transition: 0.4s;
-    z-index: 2;
+    z-index: 2; */
 }
 
 .iconeOp{

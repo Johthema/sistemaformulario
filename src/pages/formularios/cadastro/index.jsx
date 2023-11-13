@@ -7,8 +7,8 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FaChevronLeft, FaRegDotCircle } from "react-icons/fa";
-import { FaT } from "react-icons/fa6";
+import { FaChevronLeft, FaRegDotCircle, FaRegCheckSquare } from "react-icons/fa";
+import { FaT, FaSort } from "react-icons/fa6";
 
 
 export default function CreateForm(){
@@ -75,8 +75,8 @@ export default function CreateForm(){
                         <Col className={Style.quadradoOp}><FaRegDotCircle className={Style.iconeOp}/><h5>Radio</h5> </Col>
                     </Row>
                     <Row>
-                        <Col className={Style.quadradoOp}>3</Col>
-                        <Col className={Style.quadradoOp}>4</Col>
+                        <Col className={Style.quadradoOp}><FaRegCheckSquare className={Style.iconeOp}/><h5>Check</h5></Col>
+                        <Col className={Style.quadradoOp}><FaSort className={Style.iconeOp}/><h5>Número</h5></Col>
                     </Row>
                     <Row>
                         <Col className={Style.quadradoOp}>5</Col>
