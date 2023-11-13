@@ -17,7 +17,7 @@ display: flex;
 margin: auto;
 justify-content: center;
 height: 100%;
-background-image: linear-gradient(to right, #fff 75%, #0090FF );
+background-image: linear-gradient(to right, #fff 70%, #0090FF  );
 
 }
 .divFormDir{

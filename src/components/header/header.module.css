@@ -5,7 +5,8 @@
 }
 
 .headerIconeLogo{
-    color:#fff
+    color:#fff;
+   
 }
 
 .headerNavBar{
@@ -50,4 +51,10 @@
 .divIconesMenu{
     display: flex;
     margin-inline-start: auto;
+}
+
+.imgLogo{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
 }
