@@ -29,3 +29,42 @@
 .botaoSeguir1{
     margin-left: 10px;
 }
+
+/*Estilo criacao de formulario*/
+.divCriacaoForm{
+    display: flex;
+} 
+.divEsquerda{
+height: 100vh;
+width: 20%;
+background-color: #efeff0;
+border-right: solid 1px #d8d8d8;
+}
+.divDireita{
+    height: 100vh;
+    width: 80%;
+}
+
+/*Estilo das opcoes laterais*/
+.botaoVoltar{
+    cursor: pointer;
+    color: #aaa9a9;
+    font-size: 18px;
+    transition: 0.6s;
+    width: 100px;
+    margin-top: 10px;
+   
+}
+.botaoVoltar:hover{
+      color: #c7c6c6;
+      /* margin-left: -20px;
+      transition: margin-left 0.6s; */
+}
+
+.quadradoOp{
+    width: 100px;
+    height: 100px;
+    border: solid 1px #d8d8d8;
+    margin: 2px;
+    background-color: #fff;
+}

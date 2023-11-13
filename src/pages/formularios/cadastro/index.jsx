@@ -4,6 +4,11 @@ import Form from 'react-bootstrap/Form';
 import {useState, useEffect, useRef} from 'react';
 import { useRouter } from "next/router";
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { FaChevronLeft } from "react-icons/fa";
+
 
 export default function CreateForm(){
 
@@ -13,13 +18,16 @@ export default function CreateForm(){
 
     //Variaveis do formulario
     const [nomeTitulo, setNomeTitulo] = useState('')
-    const [nome, setNome] = useState('')
+    const [nome, setNome] = useState('teste')
   
   
     useEffect(() => {
       // Ativa a animação após o componente ser montado no cliente
       setTransicao(true);
-      inputRef.current.focus();
+      if(nome == ''){
+        inputRef.current.focus();
+      }
+
     }, []);
     const changeNome=(evt)=>(
         setNomeTitulo(evt.target.value)
@@ -28,13 +36,19 @@ export default function CreateForm(){
         setNome(nomeTitulo)
     }
 
+    const Voltar = () => {
+        window.history.back();
+      };
+
+
 
 
     return(
         <Layout>
-            <div className={Style.divFundo}>
+          
 
                 {nome == '' &&
+                  <div className={Style.divFundo}>
                     <div className={Style.divTituloForm} >
                     <h5 className={transicao ? Style.nomeFormulario : Style.nomeFormulario2  }>Você precisa de um títuto para seu formulário</h5>
                         <div className={Style.divFormNome}>
@@ -43,18 +57,42 @@ export default function CreateForm(){
                         </div>
                         
                     </div>
+                    </div>
 
                 }
 
-                {nome &&
 
-                <h4>Formulario criacao</h4>
+            {nome &&
+              
+              <div className={Style.divCriacaoForm}>
 
-                }
-                
-                
+                 <div className={Style.divEsquerda}>
+                 <h5 className={Style.botaoVoltar} onClick={Voltar}><FaChevronLeft/> Voltar</h5>
+                 <Container>
+                    <Row>
+                        <Col className={Style.quadradoOp}>1 </Col>
+                        <Col className={Style.quadradoOp}>2 </Col>
+                    </Row>
+                    <Row>
+                        <Col className={Style.quadradoOp}>3</Col>
+                        <Col className={Style.quadradoOp}>4</Col>
+                    </Row>
+                    <Row>
+                        <Col className={Style.quadradoOp}>5</Col>
+                        <Col className={Style.quadradoOp}>6</Col>
+                    </Row>
+                </Container>                    
 
-            </div>
+                 </div>
+                 <div className={Style.divDireita}>
+2                       
+                 </div>
+
+             </div>
+         
+            
+           
+             }
         </Layout>
 
         
