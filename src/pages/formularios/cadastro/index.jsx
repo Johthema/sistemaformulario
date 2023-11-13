@@ -7,7 +7,8 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronLeft, FaRegDotCircle } from "react-icons/fa";
+import { FaT } from "react-icons/fa6";
 
 
 export default function CreateForm(){
@@ -70,8 +71,8 @@ export default function CreateForm(){
                  <h5 className={Style.botaoVoltar} onClick={Voltar}><FaChevronLeft/> Voltar</h5>
                  <Container>
                     <Row>
-                        <Col className={Style.quadradoOp}>1 </Col>
-                        <Col className={Style.quadradoOp}>2 </Col>
+                        <Col className={Style.quadradoOp}><FaT className={Style.iconeOp}/><h5>Texto</h5></Col>
+                        <Col className={Style.quadradoOp}><FaRegDotCircle className={Style.iconeOp}/><h5>Radio</h5> </Col>
                     </Row>
                     <Row>
                         <Col className={Style.quadradoOp}>3</Col>
