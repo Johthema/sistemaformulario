@@ -13,9 +13,12 @@
 }
 .divFormEsq{
 width: 50%;
-display: flex;
+display: flex; 
 margin: auto;
 justify-content: center;
+height: 100%;
+background-image: linear-gradient(to right, #fff 75%, #0090FF );
+
 }
 .divFormDir{
     width: 50%;
@@ -34,7 +37,9 @@ justify-content: center;
 
 .cardFormEsq{
     width: 600px;
-    color: #fff
+    color: #fff;
+    margin: auto
+    /*  */
 }
 
 .tituloLogo{
@@ -111,4 +116,9 @@ justify-content: center;
 .botaoEntrar{
     width: 90%;
     margin-top: 60px;
+}
+
+.imgLogo{
+    width: 500px;
+    height: 500px;
 }

@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import Image from 'next/image';
+import Logo from '../../assets/logo_grande.png';
 
 
 export default function Login(){
@@ -34,7 +36,8 @@ export default function Login(){
           <div className={Style.divCard}>
             <div className={Style.divFormEsq}>
               <div className={Style.cardFormEsq}>
-                <h1><b className={Style.tituloLogo}>SiCoDa</b> - sistema de Coleta de Dados</h1>
+              <Image src={Logo} className={Style.imgLogo} alt=""/>
+                {/* <h1>Sistema de Coleta de Dados</h1> */}
               </div>
                 
             </div>
