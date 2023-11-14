@@ -20,9 +20,9 @@ export default function CreateForm(){
 
     //Variaveis do formulario
     const [nomeTitulo, setNomeTitulo] = useState('');
-    const [nome, setNome] = useState('teste');
-    const [descricao, setDescricao] = useState('teste');
-    const [descri, setDescri] = useState('teste');
+    const [nome, setNome] = useState('Pesquisa teste');
+    const [descricao, setDescricao] = useState('Pesquisa teste');
+    const [descri, setDescri] = useState('Descrição teste do formulário');
   
   
     useEffect(() => {
@@ -122,8 +122,13 @@ export default function CreateForm(){
 
                 <div className={Style.paginaFormulario}>
                     <div className={Style.margemForm}>
-                        <h4>{nome}</h4>
-                        <div className={Style.DivEstiloDescricao}>{descri}</div>
+                        <div className={Style.divNomeTitulo}>
+                            <h1><b>{nome}</b></h1>
+                        </div>
+                        
+                        <div className={Style.DivEstiloDescricao}>
+                            <h4>{descri}</h4>
+                        </div>
 
                     </div>
 
