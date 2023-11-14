@@ -90,3 +90,14 @@ border-right: solid 1px #d8d8d8;
 .quadradoOp:hover{
     color:#0090FF
 }
+
+/*Estilo da página de formulario*/
+
+.paginaFormulario{
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    margin-top: 40px;
+    background-color: #fff;
+    box-shadow: 5px -2px 5px 0px #bcbbbb;
+}

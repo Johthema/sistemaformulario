@@ -20,9 +20,9 @@ export default function CreateForm(){
 
     //Variaveis do formulario
     const [nomeTitulo, setNomeTitulo] = useState('');
-    const [nome, setNome] = useState('');
-    const [descricao, setDescricao] = useState('');
-    const [descri, setDescri] = useState('');
+    const [nome, setNome] = useState('teste');
+    const [descricao, setDescricao] = useState('teste');
+    const [descri, setDescri] = useState('teste');
   
   
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function CreateForm(){
       if(nome == ''){
         inputRef.current.focus();
       }
-      if(nome != ''){
+      if(descricao == ''){
         inputRef2.current.focus();
       }
 
@@ -116,6 +116,9 @@ export default function CreateForm(){
                  <div className={Style.divDireita}>
 {/* ===================================================Página de formulário============================================ */}
 
+                <div className={Style.paginaFormulario}>
+
+                </div>
 
 
                  </div>
