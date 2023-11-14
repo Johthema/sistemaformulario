@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FaChevronLeft, FaRegDotCircle, FaRegCheckSquare } from "react-icons/fa";
+import { FaChevronLeft, FaRegDotCircle, FaRegCheckSquare, FaQuestionCircle } from "react-icons/fa";
 import { FaT, FaSort } from "react-icons/fa6";
 
 
@@ -129,9 +129,11 @@ export default function CreateForm(){
                         <div className={Style.DivEstiloDescricao}>
                             <h4>{descri}</h4>
                         </div>
-
+                        
+                        <Button variant="warning" className={Style.BotaoAdd}>Add Questão <FaQuestionCircle/></Button>
                     </div>
 
+                  
                 </div>
 
 
