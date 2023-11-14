@@ -16,10 +16,13 @@ export default function CreateForm(){
     const router = useRouter();
     const [transicao, setTransicao] = useState(false)
     const inputRef = useRef(null);
+    const inputRef2 = useRef(null);
 
     //Variaveis do formulario
-    const [nomeTitulo, setNomeTitulo] = useState('')
-    const [nome, setNome] = useState('')
+    const [nomeTitulo, setNomeTitulo] = useState('');
+    const [nome, setNome] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [descri, setDescri] = useState('');
   
   
     useEffect(() => {
@@ -28,13 +31,23 @@ export default function CreateForm(){
       if(nome == ''){
         inputRef.current.focus();
       }
+      if(nome != ''){
+        inputRef2.current.focus();
+      }
 
     }, []);
     const changeNome=(evt)=>(
         setNomeTitulo(evt.target.value)
     )
+    const changeDescricao=(evt)=>(
+        setDescricao(evt.target.value)
+    )
     function Seguir(){
         setNome(nomeTitulo)
+    }
+
+    function SeguirCreat(){
+        setDescri(descricao)
     }
 
     const Voltar = () => {
@@ -61,9 +74,24 @@ export default function CreateForm(){
                     </div>
 
                 }
+                {nome && descri == '' &&
+
+                    <div className={Style.divFundo}>
+                    <div className={Style.divTituloForm} >
+                    <h5 className={transicao ? Style.nomeFormulario : Style.nomeFormulario2  }>Descreva do que se trata esse formulário</h5>
+                        <div className={Style.divFormNome}>
+                            <Form.Control as="textarea" rows={3} id="inputPassword5" aria-describedby="passwordHelpBlock" ref={inputRef2} onChange={changeDescricao}/>
+                            <Button variant="primary" className={Style.botaoSeguir1} onClick={()=>SeguirCreat()}>Prosseguir</Button>
+                        </div>
+                        
+                    </div>
+                    </div>
 
 
-            {nome &&
+                }
+
+
+            {descri &&
               
               <div className={Style.divCriacaoForm}>
 
