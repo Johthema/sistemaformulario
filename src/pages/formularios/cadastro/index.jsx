@@ -60,7 +60,7 @@ export default function CreateForm(){
     return(
         <Layout>
           
-
+{/* ===================================================Introdução ao formulário============================================ */}
                 {nome == '' &&
                   <div className={Style.divFundo}>
                     <div className={Style.divTituloForm} >
@@ -90,7 +90,7 @@ export default function CreateForm(){
 
                 }
 
-
+{/* ===================================================Menu lateral============================================ */}
             {descri &&
               
               <div className={Style.divCriacaoForm}>
@@ -114,7 +114,10 @@ export default function CreateForm(){
 
                  </div>
                  <div className={Style.divDireita}>
-2                       
+{/* ===================================================Página de formulário============================================ */}
+
+
+
                  </div>
 
              </div>
