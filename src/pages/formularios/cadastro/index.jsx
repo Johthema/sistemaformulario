@@ -106,10 +106,14 @@ export default function CreateForm(){
                         <Col className={Style.quadradoOp}><FaRegCheckSquare className={Style.iconeOp}/><h5>Check</h5></Col>
                         <Col className={Style.quadradoOp}><FaSort className={Style.iconeOp}/><h5>Número</h5></Col>
                     </Row>
-                    {/* <Row>
-                        <Col className={Style.quadradoOp}>5</Col>
-                        <Col className={Style.quadradoOp}>6</Col>
-                    </Row> */}
+                    <Row>
+                        <Col >
+                        <Button variant="success" className={Style.BotaoEnviar}>Salvar modelo</Button>
+                        <Button variant="primary" className={Style.BotaoEnviar}>Enviar formulário</Button>
+                        </Col>
+                       
+                        {/* <Col className={Style.quadradoOp}>6</Col> */}
+                    </Row>
                 </Container>                    
 
                  </div>
@@ -117,6 +121,11 @@ export default function CreateForm(){
 {/* ===================================================Página de formulário============================================ */}
 
                 <div className={Style.paginaFormulario}>
+                    <div className={Style.margemForm}>
+                        <h4>{nome}</h4>
+                        <div className={Style.DivEstiloDescricao}>{descri}</div>
+
+                    </div>
 
                 </div>
 

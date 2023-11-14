@@ -73,11 +73,7 @@ border-right: solid 1px #d8d8d8;
    
    
 }
-.quadradoOp:hover{
-    /* transform: scale(1.05);
-    transition: 0.4s;
-    z-index: 2; */
-}
+
 
 .iconeOp{
     justify-content: center;
@@ -90,6 +86,10 @@ border-right: solid 1px #d8d8d8;
 .quadradoOp:hover{
     color:#0090FF
 }
+.BotaoEnviar{
+    margin-top: 10px;
+    width: 100%;
+}
 
 /*Estilo da página de formulario*/
 
@@ -100,4 +100,18 @@ border-right: solid 1px #d8d8d8;
     margin-top: 40px;
     background-color: #fff;
     box-shadow: 5px -2px 5px 0px #bcbbbb;
+    padding: 30px;
+}
+
+.margemForm{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    /* border: solid 1px #aaa9a9; */
+
+}
+
+.DivEstiloDescricao{
+    width: 100%;
+    border: solid 1px #aaa9a9
 }
