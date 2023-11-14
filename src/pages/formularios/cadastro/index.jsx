@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FaChevronLeft, FaRegDotCircle, FaRegCheckSquare, FaQuestionCircle } from "react-icons/fa";
+import { FaChevronLeft, FaRegDotCircle, FaRegCheckSquare, FaQuestionCircle, FaPhone } from "react-icons/fa";
 import { FaT, FaSort } from "react-icons/fa6";
 
 
@@ -20,9 +20,9 @@ export default function CreateForm(){
 
     //Variaveis do formulario
     const [nomeTitulo, setNomeTitulo] = useState('');
-    const [nome, setNome] = useState('Pesquisa teste');
-    const [descricao, setDescricao] = useState('Pesquisa teste');
-    const [descri, setDescri] = useState('Descrição teste do formulário');
+    const [nome, setNome] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [descri, setDescri] = useState('');
 
     //Lista de questão
     const [lista, setLista] = useState(['']);
@@ -34,7 +34,7 @@ export default function CreateForm(){
       if(nome == ''){
         inputRef.current.focus();
       }
-      if(descricao == ''){
+      if(nome !== '' && descricao == ''){
         inputRef2.current.focus();
       }
 
@@ -42,7 +42,7 @@ export default function CreateForm(){
 
 
     const adicionarElemento = () => {
-        const novoElemento = 'novo item'; // Novo elemento a ser adicionado
+        const novoElemento = 'Questão'; // Novo elemento a ser adicionado
     
         // Criar uma nova lista com o novo elemento adicionado ao final
         const novaLista = [...lista, novoElemento];
@@ -124,6 +124,10 @@ export default function CreateForm(){
                         <Col className={Style.quadradoOp}><FaSort className={Style.iconeOp}/><h5>Número</h5></Col>
                     </Row>
                     <Row>
+                        <Col className={Style.quadradoOp}><FaPhone className={Style.iconeOp}/><h5>Telefone</h5></Col>
+                        <Col className={Style.quadradoOp}><FaSort className={Style.iconeOp}/><h5>Número</h5></Col>
+                    </Row>
+                    <Row>
                         <Col >
                         <Button variant="success" className={Style.BotaoEnviar}>Salvar modelo</Button>
                         <Button variant="primary" className={Style.BotaoEnviar}>Enviar formulário</Button>
@@ -146,9 +150,17 @@ export default function CreateForm(){
                         <div className={Style.DivEstiloDescricao}>
                             <h4>{descri}</h4>
                         </div>
+                        <div className={Style.divDadosPessoais}>
+                            <h5>Qual seu nome:</h5>
+                        </div>
+
 
                         {lista.map((item, index) => (
-                                <h5 key={index}>{item}</h5>
+                                // <h5 key={index}>{item}</h5>
+                                <div className={Style.divQuestao} key={index}>
+                                    <h5>Questão - {index+1}</h5>
+                                    
+                                </div>
                         ))}
                         
                         <Button variant="warning" className={Style.BotaoAdd} onClick={adicionarElemento}>Add Questão <FaQuestionCircle/></Button>
