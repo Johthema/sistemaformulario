@@ -23,6 +23,9 @@ export default function CreateForm(){
     const [nome, setNome] = useState('Pesquisa teste');
     const [descricao, setDescricao] = useState('Pesquisa teste');
     const [descri, setDescri] = useState('Descrição teste do formulário');
+
+    //Lista de questão
+    const [lista, setLista] = useState(['']);
   
   
     useEffect(() => {
@@ -36,6 +39,20 @@ export default function CreateForm(){
       }
 
     }, []);
+
+
+    const adicionarElemento = () => {
+        const novoElemento = 'novo item'; // Novo elemento a ser adicionado
+    
+        // Criar uma nova lista com o novo elemento adicionado ao final
+        const novaLista = [...lista, novoElemento];
+    
+        // Atualizar o estado com a nova lista
+        setLista(novaLista);
+      };
+
+
+
     const changeNome=(evt)=>(
         setNomeTitulo(evt.target.value)
     )
@@ -129,8 +146,12 @@ export default function CreateForm(){
                         <div className={Style.DivEstiloDescricao}>
                             <h4>{descri}</h4>
                         </div>
+
+                        {lista.map((item, index) => (
+                                <h5 key={index}>{item}</h5>
+                        ))}
                         
-                        <Button variant="warning" className={Style.BotaoAdd}>Add Questão <FaQuestionCircle/></Button>
+                        <Button variant="warning" className={Style.BotaoAdd} onClick={adicionarElemento}>Add Questão <FaQuestionCircle/></Button>
                     </div>
 
                   
