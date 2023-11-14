@@ -19,7 +19,7 @@ export default function CreateForm(){
 
     //Variaveis do formulario
     const [nomeTitulo, setNomeTitulo] = useState('')
-    const [nome, setNome] = useState('teste')
+    const [nome, setNome] = useState('')
   
   
     useEffect(() => {
@@ -78,10 +78,10 @@ export default function CreateForm(){
                         <Col className={Style.quadradoOp}><FaRegCheckSquare className={Style.iconeOp}/><h5>Check</h5></Col>
                         <Col className={Style.quadradoOp}><FaSort className={Style.iconeOp}/><h5>Número</h5></Col>
                     </Row>
-                    <Row>
+                    {/* <Row>
                         <Col className={Style.quadradoOp}>5</Col>
                         <Col className={Style.quadradoOp}>6</Col>
-                    </Row>
+                    </Row> */}
                 </Container>                    
 
                  </div>
