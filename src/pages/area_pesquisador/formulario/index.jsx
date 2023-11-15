@@ -26,7 +26,13 @@ export default function Formulario(){
     const [now, setNow] = useState(0) ;
     const [transicao, setTransicao] = useState(false);
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
+    const [showSucesso, setShowSucesso] = useState(false);
+    
+    const handleClose = () =>{
+        
+        setShow(false);
+        setShowSucesso(false)
+    } 
     // const handleShow = () => setShow(true);
     //Varivaeis dados de usuario
     const [nomeEntrevistado, setNomeEntrevistado] = useState('');
@@ -50,9 +56,6 @@ export default function Formulario(){
 
             const cont = 10 + now
             setNow(cont);
-           
-
-           
 
         }  if(indicePerguntaAtual == perguntas.length - 1){
             setShow(true)
@@ -98,6 +101,18 @@ export default function Formulario(){
       console.log("instagram do entrevistado: ", instagram)
       console.log("facebook do entrevistado: ",facebook)
       console.log("bairro do entrevistado: ",bairro)
+
+
+     const enviarFormulario = () => {
+        setShow(false);
+        setShowSucesso(true)
+        
+     }
+
+     const novoFormulario = () =>{
+        setShowSucesso(true);
+        window.location.reload()
+     }
 
     return (
         <Layout>
@@ -165,11 +180,27 @@ export default function Formulario(){
           <Button variant="secondary" onClick={handleClose}>
             Cancelar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={enviarFormulario}>
             Sim
           </Button>
         </Modal.Footer>
-      </Modal>
+</Modal>
+
+
+<Modal show={showSucesso} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Formulario Enviado com sucesso!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Faça outra entrevista</Modal.Body>
+        <Modal.Footer>
+          {/* <Button variant="secondary" onClick={handleClose}>
+            Cancelar
+          </Button> */}
+          <Button variant="primary" onClick={novoFormulario}>
+            Começar
+          </Button>
+        </Modal.Footer>
+</Modal>
 
         </Layout>
          
