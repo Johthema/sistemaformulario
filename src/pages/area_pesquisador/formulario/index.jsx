@@ -27,7 +27,8 @@ export default function Formulario(){
     const [transicao, setTransicao] = useState(false);
     const [show, setShow] = useState(false);
     const [showSucesso, setShowSucesso] = useState(false);
-    
+    const [campoVazio, setCampoVazio] = useState(false);
+
     const handleClose = () =>{
         
         setShow(false);
@@ -47,6 +48,13 @@ export default function Formulario(){
     const [respostaAtual, setRespostaAtual] = useState(''); // Estado para controlar a resposta atual
 
     const adicionarElemento = () => {
+        if (respostaAtual.trim() === '') {
+            setCampoVazio(true);
+        } else {
+            setCampoVazio(false);
+            // Execute outras ações que você deseja fazer quando o campo não estiver vazio
+            // Por exemplo, enviar o formulário, adicionar elementos, etc.
+       
 
         // Verificar se ainda há perguntas não respondidas
         if (indicePerguntaAtual < perguntas.length - 1) {
@@ -64,7 +72,7 @@ export default function Formulario(){
             console.log('Todas as perguntas foram respondidas.');
         }
        
-
+    }
 
         setRespostaAtual('');
       };
@@ -133,7 +141,7 @@ export default function Formulario(){
                             </div>
                             
                             <div className={Style.DivEstiloDescricao}>
-                                <h4>Essa pesquisa tem o intuito de obter informações de cidadãos eleitores dos bairros da cidade de Manaus</h4>
+                                <h4>Essa pesquisa tem o intuito de obter informações de cidadãos eleitores da cidade de Manaus</h4>
                             </div>
                             <div className={Style.divDadosPessoais}>
                                 <br/>
@@ -142,8 +150,10 @@ export default function Formulario(){
                               
                                 
                                 
-                            <FloatingLabel controlId="floatingInput" className="mb-3">
-                                <Form.Control type="text" onChange={respostaQuestao} value={respostaAtual} />
+                            <FloatingLabel controlId="floatingInput" className={`mb-3 ${campoVazio ? Style.campo_vazio : ''}`} >
+                           
+                                <Form.Control type="text" onChange={respostaQuestao} value={respostaAtual} required />
+                                
                             </FloatingLabel>
                             
                             </div>

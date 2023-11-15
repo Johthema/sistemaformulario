@@ -108,3 +108,8 @@
     width: 100px;
     margin: 10px;
 }
+
+.campo_vazio {
+    /* Muda a cor da borda para vermelho */
+    box-shadow: 0 0 5px red; /* Adiciona uma sombra vermelha ao redor do campo */
+}
