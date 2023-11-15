@@ -5,6 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState, useEffect } from 'react';
+import Modal from 'react-bootstrap/Modal';
 
 
 export default function Formulario(){
@@ -23,6 +24,9 @@ export default function Formulario(){
     const [isFlipped, setIsFlipped] = useState(false);
     const [now, setNow] = useState(0) ;
     const [transicao, setTransicao] = useState(false);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     //Varivaeis dados de usuario
     const [nomeEntrevistado, setNomeEntrevistado] = useState('');
     const [cpfEntrevistado, setCpfEntrevistado] = useState('');
@@ -128,7 +132,7 @@ export default function Formulario(){
                             <Button variant="success" className={Style.botaoProximo} onClick={adicionarElemento}>Próxima pergunta</Button>
                             }
                             {indicePerguntaAtual == perguntas.length-1 &&
-                            <Button variant="success" className={Style.botaoProximo} onClick={adicionarElemento}>Finalizar</Button>
+                            <Button variant="success" className={Style.botaoProximo} onClick={handleShow}>Finalizar</Button>
                             }
                             </div>
                         <div className={Style.divBotaoCancEnv}>
@@ -146,6 +150,22 @@ export default function Formulario(){
                 </div>
 
             ))}
+
+
+<Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Entrevista finalizada!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Deseja enviar respostas?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancelar
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Sim
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
         </Layout>
          
