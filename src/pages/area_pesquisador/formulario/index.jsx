@@ -9,7 +9,16 @@ import { useState, useEffect } from 'react';
 
 export default function Formulario(){
     const [lista, setLista] = useState(['']);
-    const [perguntas, setPerguntas] = useState(['Qual seu nome?','Qual seu CPF?', 'Qual seu telefone?']);
+    const [perguntas, setPerguntas] = useState([
+        'Qual seu nome?',
+        'Qual seu CPF?',
+        'Qual seu sexo?',
+        'Qual seu telefone celular? 92 9 XXXX-XXXX',
+        'Qual seu Instagram',
+        'Qual seu Facebook',
+        'Qual seu Bairro?',
+        
+    ]);
     const [indicePerguntaAtual, setIndicePerguntaAtual] = useState(0); // Estado para controlar o índice da pergunta atual
     const [isFlipped, setIsFlipped] = useState(false);
     const [now, setNow] = useState(0) ;
@@ -17,15 +26,14 @@ export default function Formulario(){
     //Varivaeis dados de usuario
     const [nomeEntrevistado, setNomeEntrevistado] = useState('');
     const [cpfEntrevistado, setCpfEntrevistado] = useState('');
+    const [sexo, setSexo] = useState('');
     const [telefoneEntrevistado, setTelefoneEntrevistado] = useState('');
+    const [instagram, setInstagram] = useState('');
+    const [facebook, setFacebook] = useState('');
+    const [bairro, setBairro] = useState('');
 
 
     const [respostaAtual, setRespostaAtual] = useState(''); // Estado para controlar a resposta atual
-
-    // useEffect(() => {
-    //     // Reseta a resposta atual quando a pergunta muda
-    //     setRespostaAtual('');
-    // }, [indicePerguntaAtual])
 
     const adicionarElemento = () => {
 
@@ -37,21 +45,6 @@ export default function Formulario(){
 
             const cont = 10 + now
             setNow(cont);
-           
-            // if(transicao == false){
-            //     setTransicao(true)
-            // } else if(transicao == true){
-            //     setTransicao(false)
-              
-            // }
-            
-            // const novoElemento = 'novo item'; // Novo elemento a ser adicionado
-    
-            // // Criar uma nova lista com o novo elemento adicionado ao final
-            // const novaLista = [...lista, novoElemento];
-        
-            // // Atualizar o estado com a nova lista
-            // setLista(novaLista);
 
            
 
@@ -73,7 +66,19 @@ export default function Formulario(){
             setCpfEntrevistado(evt.target.value);
             setRespostaAtual(evt.target.value);
         } else if(indicePerguntaAtual == 2){
+            setSexo(evt.target.value);
+            setRespostaAtual(evt.target.value);
+        } else if(indicePerguntaAtual == 3){
             setTelefoneEntrevistado(evt.target.value);
+            setRespostaAtual(evt.target.value);
+        } else if(indicePerguntaAtual == 4){
+            setInstagram(evt.target.value);
+            setRespostaAtual(evt.target.value);
+        }else if(indicePerguntaAtual == 5){
+            setFacebook(evt.target.value);
+            setRespostaAtual(evt.target.value);
+        }else if(indicePerguntaAtual == 6){
+            setBairro(evt.target.value);
             setRespostaAtual(evt.target.value);
         }
       }
@@ -81,6 +86,10 @@ export default function Formulario(){
       console.log("nome do entrevistado: ", nomeEntrevistado)
       console.log("cpf do entrevistado: ", cpfEntrevistado)
       console.log("telefone do entrevistado: ", telefoneEntrevistado)
+      console.log("sexo do entrevistado: ", sexo)
+      console.log("instagram do entrevistado: ", instagram)
+      console.log("facebook do entrevistado: ",facebook)
+      console.log("bairro do entrevistado: ",bairro)
 
     return (
         <Layout>
