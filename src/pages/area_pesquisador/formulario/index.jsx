@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { FaSearch } from "react-icons/fa";
 
 
 export default function Formulario(){
@@ -113,7 +114,7 @@ export default function Formulario(){
                     
                         <div className={Style.margemForm}>
                             <div className={Style.divNomeTitulo}>
-                                <h1><b>Pesquisa Manaus 2024</b></h1>
+                                <h1><b>Pesquisa Manaus 2<FaSearch/>24</b></h1>
                             </div>
                             
                             <div className={Style.DivEstiloDescricao}>
