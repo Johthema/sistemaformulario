@@ -1,16 +1,16 @@
 /*Estilo da página de formulario*/
 
-.paginaFormulario{
+/* .paginaFormulario{
     margin: auto;
     width: 95%;
     height: 400px;
     margin-top: 40px;
     background-color: #fff;
-    /* box-shadow: 5px -2px 5px 0px #bcbbbb; */
+  
     padding: 30px;
     border: solid 2px #0090FF;
     border-radius: 19px;
-}
+} */
 
 .margemForm{
     margin: auto;
@@ -63,3 +63,35 @@
 .botaoProximo{
     width: 100%;
 }
+
+.paginaFormulario{
+    /* font-size: 2.5rem;
+    color: #0090FF; */
+    margin: auto;
+    width: 95%;
+    height: 400px;
+    margin-top: 40px;
+    background-color: #fff;
+    /* box-shadow: 5px -2px 5px 0px #bcbbbb; */
+    padding: 30px;
+    border: solid 2px #0090FF;
+    border-radius: 19px;
+    /* transform: rotateY(360deg);
+    transition:   transform 1s ease-in-out; */
+    transition: transform 1s ease-in-out;
+} 
+.paginaFormulario2{
+    /* font-size: 2.5rem;
+    color: #0090FF; */
+    margin: auto;
+    width: 95%;
+    height: 400px;
+    margin-top: 40px;
+    background-color: #fff;
+    /* box-shadow: 5px -2px 5px 0px #bcbbbb; */
+    padding: 30px;
+    border: solid 2px #0090FF;
+    border-radius: 19px;
+    transform: rotateY(360deg);
+    transition:   transform 1s ease-in-out;
+} 

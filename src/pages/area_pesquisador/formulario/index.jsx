@@ -9,10 +9,16 @@ import { useState } from 'react';
 
 export default function Formulario(){
     const [lista, setLista] = useState(['']);
-    const [perguntas, setPerguntas] = useState(['Qual seu nome?','Qual seu CPF?']);
+    const [perguntas, setPerguntas] = useState(['Qual seu nome?','Qual seu CPF?', 'Qual seu telefone?']);
     const [indicePerguntaAtual, setIndicePerguntaAtual] = useState(0); // Estado para controlar o índice da pergunta atual
     const [isFlipped, setIsFlipped] = useState(false);
-    const now = 60;
+    const [now, setNow] = useState(0) ;
+    const [transicao, setTransicao] = useState(false);
+    //Varivaeis dados de usuario
+    const [nomeEntrevistado, setNomeEntrevistado] = useState('');
+    const [cpfEntrevistado, setCpfEntrevistado] = useState('');
+    const [telefoneEntrevistado, setTelefoneEntrevistado] = useState('');
+
 
     const handleClick = () => {
         setIsFlipped(!isFlipped);
@@ -23,20 +29,51 @@ export default function Formulario(){
         // Verificar se ainda há perguntas não respondidas
         if (indicePerguntaAtual < perguntas.length - 1) {
             setIndicePerguntaAtual(indicePerguntaAtual + 1); // Atualizar o índice da próxima pergunta
+           
+            setTransicao(!transicao)
+
+            const cont = 10 + now
+            setNow(cont);
+            // if(transicao == false){
+            //     setTransicao(true)
+            // } else if(transicao == true){
+            //     setTransicao(false)
+              
+            // }
+            
+            // const novoElemento = 'novo item'; // Novo elemento a ser adicionado
+    
+            // // Criar uma nova lista com o novo elemento adicionado ao final
+            // const novaLista = [...lista, novoElemento];
+        
+            // // Atualizar o estado com a nova lista
+            // setLista(novaLista);
+
+           
+
         } else {
             // Aqui você pode decidir o que fazer quando todas as perguntas forem respondidas
             console.log('Todas as perguntas foram respondidas.');
         }
+       
 
 
-        // const novoElemento = 'novo item'; // Novo elemento a ser adicionado
-    
-        // // Criar uma nova lista com o novo elemento adicionado ao final
-        // const novaLista = [...lista, novoElemento];
-    
-        // // Atualizar o estado com a nova lista
-        // setLista(novaLista);
+     
       };
+
+      const respostaQuestao=(evt) =>{
+        if(indicePerguntaAtual == 0){
+            setNomeEntrevistado(evt.target.value);
+        } else if(indicePerguntaAtual == 1){
+            setCpfEntrevistado(evt.target.value);
+        } else if(indicePerguntaAtual == 2){
+            setTelefoneEntrevistado(evt.target.value);
+        }
+      }
+
+      console.log("nome do entrevistado: ", nomeEntrevistado)
+      console.log("cpf do entrevistado: ", cpfEntrevistado)
+      console.log("telefone do entrevistado: ", telefoneEntrevistado)
 
     return (
         <Layout>
@@ -48,7 +85,7 @@ export default function Formulario(){
           
 
 
-                <div className={Style.paginaFormulario} >
+                <div className={transicao ? Style.paginaFormulario2 : Style.paginaFormulario}  >
                     <div className={Style.divQuantidadeQestoes}><h1 className={Style.legendaQtdQts}>Questão {indicePerguntaAtual+1} de 20</h1></div>
                     
                         <div className={Style.margemForm}>
@@ -66,8 +103,8 @@ export default function Formulario(){
                               
                                 
                                 
-                            <FloatingLabel controlId="floatingInput" label="Nome completo" className="mb-3">
-                                <Form.Control type="text" placeholder="Nome completo" />
+                            <FloatingLabel controlId="floatingInput" className="mb-3">
+                                <Form.Control type="text" onChange={respostaQuestao} />
                             </FloatingLabel>
                             
                             </div>
