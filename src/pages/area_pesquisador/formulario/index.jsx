@@ -26,7 +26,7 @@ export default function Formulario(){
     const [transicao, setTransicao] = useState(false);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // const handleShow = () => setShow(true);
     //Varivaeis dados de usuario
     const [nomeEntrevistado, setNomeEntrevistado] = useState('');
     const [cpfEntrevistado, setCpfEntrevistado] = useState('');
@@ -49,9 +49,12 @@ export default function Formulario(){
 
             const cont = 10 + now
             setNow(cont);
+           
 
            
 
+        }  if(indicePerguntaAtual == perguntas.length - 1){
+            setShow(true)
         } else {
             // Aqui você pode decidir o que fazer quando todas as perguntas forem respondidas
             console.log('Todas as perguntas foram respondidas.');
@@ -132,7 +135,7 @@ export default function Formulario(){
                             <Button variant="success" className={Style.botaoProximo} onClick={adicionarElemento}>Próxima pergunta</Button>
                             }
                             {indicePerguntaAtual == perguntas.length-1 &&
-                            <Button variant="success" className={Style.botaoProximo} onClick={handleShow}>Finalizar</Button>
+                            <Button variant="success" className={Style.botaoProximo} onClick={adicionarElemento}>Finalizar</Button>
                             }
                             </div>
                         <div className={Style.divBotaoCancEnv}>
