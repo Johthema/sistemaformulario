@@ -21,7 +21,9 @@ export default function HomePage(){
 
         }
         if(item == 3){
-            router.push('/modelos')
+            router.push('/area_pesquisador/formulario')
+            // router.push('/modelos')
+
 
         }
         if(item == 4){
