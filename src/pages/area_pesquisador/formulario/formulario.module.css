@@ -95,3 +95,16 @@
     transform: rotateY(360deg);
     transition:   transform 1s ease-in-out;
 } 
+
+.divBotaoCancEnv{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.botaoEnviarCancelar{
+    width: 100px;
+    margin: 10px;
+}

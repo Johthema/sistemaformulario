@@ -124,8 +124,24 @@ export default function Formulario(){
                             </FloatingLabel>
                             
                             </div>
+                            {indicePerguntaAtual < perguntas.length-1 &&
                             <Button variant="success" className={Style.botaoProximo} onClick={adicionarElemento}>Próxima pergunta</Button>
+                            }
+                            {indicePerguntaAtual == perguntas.length-1 &&
+                            <Button variant="success" className={Style.botaoProximo} onClick={adicionarElemento}>Finalizar</Button>
+                            }
+                            </div>
+                        <div className={Style.divBotaoCancEnv}>
+                            {/* {indicePerguntaAtual == perguntas.length-1 &&
+                            <>
+                                <Button variant="danger" className={Style.botaoEnviarCancelar} onClick={adicionarElemento}>Cancelar</Button>
+                                <Button variant="primary" className={Style.botaoEnviarCancelar} onClick={adicionarElemento}>Enviar</Button>
+                            </>
+                            
+                            } */}
+                            
                         </div>
+                       
                     
                 </div>
 
