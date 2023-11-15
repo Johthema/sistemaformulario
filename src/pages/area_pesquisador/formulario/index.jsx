@@ -4,7 +4,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export default function Formulario(){
@@ -20,9 +20,12 @@ export default function Formulario(){
     const [telefoneEntrevistado, setTelefoneEntrevistado] = useState('');
 
 
-    const handleClick = () => {
-        setIsFlipped(!isFlipped);
-      };
+    const [respostaAtual, setRespostaAtual] = useState(''); // Estado para controlar a resposta atual
+
+    // useEffect(() => {
+    //     // Reseta a resposta atual quando a pergunta muda
+    //     setRespostaAtual('');
+    // }, [indicePerguntaAtual])
 
     const adicionarElemento = () => {
 
@@ -34,6 +37,7 @@ export default function Formulario(){
 
             const cont = 10 + now
             setNow(cont);
+           
             // if(transicao == false){
             //     setTransicao(true)
             // } else if(transicao == true){
@@ -58,16 +62,19 @@ export default function Formulario(){
        
 
 
-     
+        setRespostaAtual('');
       };
 
       const respostaQuestao=(evt) =>{
         if(indicePerguntaAtual == 0){
             setNomeEntrevistado(evt.target.value);
+            setRespostaAtual(evt.target.value);
         } else if(indicePerguntaAtual == 1){
             setCpfEntrevistado(evt.target.value);
+            setRespostaAtual(evt.target.value);
         } else if(indicePerguntaAtual == 2){
             setTelefoneEntrevistado(evt.target.value);
+            setRespostaAtual(evt.target.value);
         }
       }
 
@@ -104,7 +111,7 @@ export default function Formulario(){
                                 
                                 
                             <FloatingLabel controlId="floatingInput" className="mb-3">
-                                <Form.Control type="text" onChange={respostaQuestao} />
+                                <Form.Control type="text" onChange={respostaQuestao} value={respostaAtual} />
                             </FloatingLabel>
                             
                             </div>
