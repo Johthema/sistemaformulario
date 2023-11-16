@@ -9,6 +9,7 @@ import Modal from 'react-bootstrap/Modal';
 import { FaSearch } from "react-icons/fa";
 import {ValidarCPF} from '../../api/validacaoCPF.js'
 import {Alert} from 'react-bootstrap/Alert';
+import Spinner from 'react-bootstrap/Spinner';
 
 export default function Formulario(){
     const [lista, setLista] = useState(['']);
@@ -34,6 +35,8 @@ export default function Formulario(){
     const [campoVazio, setCampoVazio] = useState(false);
 
     const [cpfInv, setCpfInv] = useState(false)
+
+    // const [disco, setDisco] = useState(false)
 
     const handleClose = () =>{
         
@@ -78,7 +81,9 @@ export default function Formulario(){
       }
 
 
-       
+      if (indicePerguntaAtual === 8){
+        setDisco(true)
+      }
 
         // Verificar se ainda há perguntas não respondidas
         if (indicePerguntaAtual < perguntas.length - 1) {
@@ -252,8 +257,15 @@ export default function Formulario(){
                              
                              
                          </Form.Select>
+
+
                       }
+
+
+
                             </FloatingLabel>
+
+                         
 
 
                             </div>
@@ -321,6 +333,16 @@ export default function Formulario(){
 </div>
 
 }
+
+{/* {disco &&
+
+<Alert key={'warning'} variant={'warning'} >
+ Mostre ao intrevistado o disco com os nomes dos cadidatos!
+    </Alert>
+
+
+
+} */}
 
 
         </Layout>
