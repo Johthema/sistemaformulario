@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { FaSearch } from "react-icons/fa";
 import {ValidarCPF} from '../../api/validacaoCPF.js'
-
+import Alert from 'react-bootstrap/Alert';
 
 export default function Formulario(){
     const [lista, setLista] = useState(['']);
@@ -29,6 +29,8 @@ export default function Formulario(){
     const [show, setShow] = useState(false);
     const [showSucesso, setShowSucesso] = useState(false);
     const [campoVazio, setCampoVazio] = useState(false);
+
+    const [cpfInv, setCpfInv] = useState(false)
 
     const handleClose = () =>{
         
@@ -66,6 +68,7 @@ export default function Formulario(){
         if (!cpfValido) {
           // Se o CPF for inválido, faça algo, por exemplo, exiba um aviso
           console.log('CPF inválido!');
+          setCpfInv(true)
           return; // Não avança para a próxima pergunta se o CPF for inválido
         }
       }
@@ -232,6 +235,13 @@ export default function Formulario(){
           </Button>
         </Modal.Footer>
 </Modal>
+
+{cpfInv &&
+    <Alert key={'danger'} variant={'danger'} onClose={() => setCpfInv(false)} dismissible>
+          Você inseriu um CPF inválido!
+    </Alert>
+}
+
 
         </Layout>
          
