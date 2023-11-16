@@ -17,9 +17,12 @@ export default function Formulario(){
         'Qual seu CPF?',
         'Qual seu sexo?',
         'Qual seu telefone celular? 929XXXX-XXXX',
+        'Qual sua data de nascimento? dd/mm/aaaa',
         'Qual seu Instagram',
         'Qual seu Facebook',
         'Qual seu Bairro?',
+
+        'Em 2024 teremos eleições para Prefeito e Vereadores. Se a eleição para PREFEITO fosse hoje, em quem o(a) sr(a) votaria para Prefeito de MANAUS? (ESPONTÂNEA – CASO NÃO ENCONTRE NA LISTA MARQUE “OUTROS”) '
         
     ]);
     const [indicePerguntaAtual, setIndicePerguntaAtual] = useState(0); // Estado para controlar o índice da pergunta atual
@@ -47,6 +50,7 @@ export default function Formulario(){
     const [cpfEntrevistado, setCpfEntrevistado] = useState('');
     const [sexo, setSexo] = useState('masculino');
     const [telefoneEntrevistado, setTelefoneEntrevistado] = useState('');
+    const [nascimentoEntrevistado, setNascimentoEntrevistado] = useState('');
     const [instagram, setInstagram] = useState('');
     const [facebook, setFacebook] = useState('');
     const [bairro, setBairro] = useState('');
@@ -116,12 +120,16 @@ export default function Formulario(){
             setTelefoneEntrevistado(numericValue);
             setRespostaAtual(numericValue);
         } else if(indicePerguntaAtual == 4){
+           
+            setNascimentoEntrevistado(evt.target.value);
+            setRespostaAtual(evt.target.value);
+        } else if(indicePerguntaAtual == 5){
             setInstagram(evt.target.value);
             setRespostaAtual(evt.target.value);
-        }else if(indicePerguntaAtual == 5){
+        }else if(indicePerguntaAtual == 6){
             setFacebook(evt.target.value);
             setRespostaAtual(evt.target.value);
-        }else if(indicePerguntaAtual == 6){
+        }else if(indicePerguntaAtual == 7){
             setBairro(evt.target.value);
             setRespostaAtual(evt.target.value);
         }
@@ -131,6 +139,7 @@ export default function Formulario(){
       console.log("cpf do entrevistado: ", cpfEntrevistado)
       console.log("telefone do entrevistado: ", telefoneEntrevistado)
       console.log("sexo do entrevistado: ", sexo)
+      console.log("Nascimento do entrevistado: ", nascimentoEntrevistado)
       console.log("instagram do entrevistado: ", instagram)
       console.log("facebook do entrevistado: ",facebook)
       console.log("bairro do entrevistado: ",bairro)
@@ -167,6 +176,21 @@ export default function Formulario(){
                             
                             <div className={Style.DivEstiloDescricao}>
                                 <h4>Essa pesquisa tem o intuito de obter informações de cidadãos eleitores da cidade de Manaus</h4>
+                            </div>
+                            <div className={Style.divTituloDaEntrevista}>
+                                {indicePerguntaAtual <= 7 &&
+                                <>
+                                 <div className={Style.divEtapa}><h5>1</h5></div> <h5> Perguntas relacionadas a dados do entrevistado</h5>
+                                </>
+                                   
+                                }
+                                 {indicePerguntaAtual > 7 &&
+                                 <>
+                                  <div className={Style.divEtapa}><h5>2</h5></div> <h5> Perguntas relacionadas as intenções do entrevistado</h5>
+                                 </>
+                                   
+                                }
+                               
                             </div>
                             <div className={Style.divDadosPessoais}>
                                 <br/>

@@ -120,3 +120,21 @@
     width: 100%;
     justify-content: center;
 }
+
+.divTituloDaEntrevista{
+    margin: 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    color:#0090FF
+}
+.divEtapa{
+    width: 35px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #0090FF;
+    color:#fff;
+    margin-right: 5px;
+    justify-content: center;
+}
