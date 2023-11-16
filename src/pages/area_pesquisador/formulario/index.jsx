@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { FaSearch } from "react-icons/fa";
+import {ValidarCPF} from '../../api/validacaoCPF.js'
 
 
 export default function Formulario(){
@@ -34,6 +35,10 @@ export default function Formulario(){
         setShow(false);
         setShowSucesso(false)
     } 
+    //variaveis de validação de CPF
+    // const cpf = '123.456.789-09';
+    // const cpfValido = validarCPF(cpf);
+
     // const handleShow = () => setShow(true);
     //Varivaeis dados de usuario
     const [nomeEntrevistado, setNomeEntrevistado] = useState('');
@@ -54,6 +59,18 @@ export default function Formulario(){
             setCampoVazio(false);
             // Execute outras ações que você deseja fazer quando o campo não estiver vazio
             // Por exemplo, enviar o formulário, adicionar elementos, etc.
+
+      // Verifica se a pergunta atual é referente ao CPF
+      if (indicePerguntaAtual === 1) { // Supondo que o CPF seja a segunda pergunta, como no seu código
+        const cpfValido = ValidarCPF(respostaAtual); // Valida o CPF inserido
+        if (!cpfValido) {
+          // Se o CPF for inválido, faça algo, por exemplo, exiba um aviso
+          console.log('CPF inválido!');
+          return; // Não avança para a próxima pergunta se o CPF for inválido
+        }
+      }
+
+
        
 
         // Verificar se ainda há perguntas não respondidas
@@ -70,6 +87,8 @@ export default function Formulario(){
         } else {
             // Aqui você pode decidir o que fazer quando todas as perguntas forem respondidas
             console.log('Todas as perguntas foram respondidas.');
+
+
         }
        
     }
@@ -82,8 +101,11 @@ export default function Formulario(){
             setNomeEntrevistado(evt.target.value);
             setRespostaAtual(evt.target.value);
         } else if(indicePerguntaAtual == 1){
-            setCpfEntrevistado(evt.target.value);
-            setRespostaAtual(evt.target.value);
+            let value = evt.target.value;
+            // Se a entrada não for um número, remova os caracteres não numéricos
+            value = value.replace(/\D/g, '');
+            setCpfEntrevistado(value);
+            setRespostaAtual(value);
         } else if(indicePerguntaAtual == 2){
             setSexo(evt.target.value);
             setRespostaAtual(evt.target.value);
