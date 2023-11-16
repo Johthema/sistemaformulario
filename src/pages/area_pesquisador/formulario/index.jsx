@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { FaSearch } from "react-icons/fa";
 import {ValidarCPF} from '../../api/validacaoCPF.js'
-import Alert from 'react-bootstrap/Alert';
+import {Alert} from 'react-bootstrap/Alert';
 
 export default function Formulario(){
     const [lista, setLista] = useState(['']);
@@ -112,8 +112,9 @@ export default function Formulario(){
             setSexo(evt.target.value);
             setRespostaAtual(evt.target.value);
         } else if(indicePerguntaAtual == 3){
-            setTelefoneEntrevistado(evt.target.value);
-            setRespostaAtual(evt.target.value);
+            const numericValue = evt.target.value.replace(/[^0-9]/g, '');
+            setTelefoneEntrevistado(numericValue);
+            setRespostaAtual(numericValue);
         } else if(indicePerguntaAtual == 4){
             setInstagram(evt.target.value);
             setRespostaAtual(evt.target.value);
