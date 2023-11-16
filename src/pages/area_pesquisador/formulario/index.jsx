@@ -16,7 +16,7 @@ export default function Formulario(){
         'Qual seu nome?',
         'Qual seu CPF?',
         'Qual seu sexo?',
-        'Qual seu telefone celular? 92 9 XXXX-XXXX',
+        'Qual seu telefone celular? 929XXXX-XXXX',
         'Qual seu Instagram',
         'Qual seu Facebook',
         'Qual seu Bairro?',
@@ -206,13 +206,6 @@ export default function Formulario(){
                             </FloatingLabel>
 
 
-                            
-                              
-                              
-
-
-
-                            
                             </div>
                             {indicePerguntaAtual < perguntas.length-1 &&
                             <Button variant="success" className={Style.botaoProximo} onClick={adicionarElemento}>Próxima pergunta</Button>
