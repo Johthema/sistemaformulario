@@ -54,7 +54,7 @@ export default function Formulario(){
     const [instagram, setInstagram] = useState('');
     const [facebook, setFacebook] = useState('');
     const [bairro, setBairro] = useState('');
-
+    const [questao9,setQuestao9] = useState('');
 
     const [respostaAtual, setRespostaAtual] = useState(''); // Estado para controlar a resposta atual
 
@@ -132,6 +132,9 @@ export default function Formulario(){
         }else if(indicePerguntaAtual == 7){
             setBairro(evt.target.value);
             setRespostaAtual(evt.target.value);
+        }else if(indicePerguntaAtual == 8){
+            setQuestao9(evt.target.value);
+            setRespostaAtual(evt.target.value);
         }
       }
 
@@ -143,6 +146,8 @@ export default function Formulario(){
       console.log("instagram do entrevistado: ", instagram)
       console.log("facebook do entrevistado: ",facebook)
       console.log("bairro do entrevistado: ",bairro)
+      console.log("candidato do entrevistado: ",questao9)
+      
 
 
      const enviarFormulario = () => {
@@ -215,7 +220,7 @@ export default function Formulario(){
                             
 
                             <FloatingLabel controlId="floatingInput" className={`mb-3 ${campoVazio ? Style.campo_vazio : ''}`} >
-                            {indicePerguntaAtual !== 2 &&    
+                            {indicePerguntaAtual !== 2 && indicePerguntaAtual !== 8 &&
                                 <Form.Control type="text" onChange={respostaQuestao} value={respostaAtual} required />
                             
                             }
@@ -227,6 +232,27 @@ export default function Formulario(){
                                    <option value="feminino">Feminino</option>
                                </Form.Select>
                             }
+
+                    {indicePerguntaAtual === 8 &&
+                         
+                         <Form.Select onChange={respostaQuestao} value={respostaAtual}>
+                              <option >Candidatos</option>
+                             <option value="Arthur Neto">Arthur Neto</option>
+                             <option value="Amom Mandel">Amom Mandel</option>
+                             <option value="Capitão Alberto Neto">Capitão Alberto Neto</option>
+                             <option value="Carol Braz">Carol Braz</option>
+                             <option value="Coronel Menezes">Coronel Menezes</option>
+                             <option value="David Almeida">David Almeida</option>
+                             <option value="Ricardo Nicolau">Ricardo Nicolau</option>
+                             <option value="Roberto Cidade">Roberto Cidade</option>
+                             <option value="Ze Ricardo">Ze Ricardo</option>
+                             <option value="Outros">Outros</option>
+                             <option value="Ninguém/Nenhum/Branco/Nulo">Ninguém/Nenhum/Branco/Nulo</option>
+                             <option value="Não sabe/Não respondeu">Não sabe/Não respondeu</option>
+                             
+                             
+                         </Form.Select>
+                      }
                             </FloatingLabel>
 
 
