@@ -45,7 +45,7 @@ export default function Formulario(){
     //Varivaeis dados de usuario
     const [nomeEntrevistado, setNomeEntrevistado] = useState('');
     const [cpfEntrevistado, setCpfEntrevistado] = useState('');
-    const [sexo, setSexo] = useState('');
+    const [sexo, setSexo] = useState('masculino');
     const [telefoneEntrevistado, setTelefoneEntrevistado] = useState('');
     const [instagram, setInstagram] = useState('');
     const [facebook, setFacebook] = useState('');
@@ -174,12 +174,44 @@ export default function Formulario(){
                                 <h5>{perguntas[indicePerguntaAtual]}</h5> {/* Mostra a pergunta atual com base no índice */}
                               
                                 
-                                
-                            <FloatingLabel controlId="floatingInput" className={`mb-3 ${campoVazio ? Style.campo_vazio : ''}`} >
-                           
+                               
+                            {/* <FloatingLabel controlId="floatingInput" className={`mb-3 ${campoVazio ? Style.campo_vazio : ''}`} >
+                            {indicePerguntaAtual !== 2 &&    
                                 <Form.Control type="text" onChange={respostaQuestao} value={respostaAtual} required />
-                                
+                            
+                            }
+                             {indicePerguntaAtual === 2 &&
+                         
+                               <Form.Select onChange={respostaQuestao} value={respostaAtual}>
+                                   <option value="masculino">Masculino</option>
+                                   <option value="feminino">Feminino</option>
+                               </Form.Select>
+                            }
+                            </FloatingLabel> */}
+                            
+
+                            <FloatingLabel controlId="floatingInput" className={`mb-3 ${campoVazio ? Style.campo_vazio : ''}`} >
+                            {indicePerguntaAtual !== 2 &&    
+                                <Form.Control type="text" onChange={respostaQuestao} value={respostaAtual} required />
+                            
+                            }
+                             {indicePerguntaAtual === 2 &&
+                         
+                               <Form.Select onChange={respostaQuestao} value={respostaAtual}>
+                                    <option >Sexo</option>
+                                   <option value="masculino">Masculino</option>
+                                   <option value="feminino">Feminino</option>
+                               </Form.Select>
+                            }
                             </FloatingLabel>
+
+
+                            
+                              
+                              
+
+
+
                             
                             </div>
                             {indicePerguntaAtual < perguntas.length-1 &&
