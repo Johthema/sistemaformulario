@@ -113,3 +113,10 @@
     /* Muda a cor da borda para vermelho */
     box-shadow: 0 0 5px red; /* Adiciona uma sombra vermelha ao redor do campo */
 }
+
+.divAlerta{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}

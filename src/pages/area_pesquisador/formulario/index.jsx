@@ -237,9 +237,13 @@ export default function Formulario(){
 </Modal>
 
 {cpfInv &&
-    <Alert key={'danger'} variant={'danger'} onClose={() => setCpfInv(false)} dismissible>
+<div className={Style.divAlerta}>
+<Alert key={'danger'} variant={'danger'} onClose={() => setCpfInv(false)} dismissible>
           Você inseriu um CPF inválido!
     </Alert>
+
+</div>
+
 }
 
 
