@@ -102,7 +102,6 @@ export default function Formulario(){
             setRespostaAtual(evt.target.value);
         } else if(indicePerguntaAtual == 1){
             let value = evt.target.value;
-            // Se a entrada não for um número, remova os caracteres não numéricos
             value = value.replace(/\D/g, '');
             setCpfEntrevistado(value);
             setRespostaAtual(value);
