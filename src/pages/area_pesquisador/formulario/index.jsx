@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { FaSearch } from "react-icons/fa";
 import {ValidarCPF} from '../../api/validacaoCPF.js'
-import {Alert} from 'react-bootstrap/Alert';
+import Alert from 'react-bootstrap/Alert';
 import Spinner from 'react-bootstrap/Spinner';
 
 export default function Formulario(){
@@ -22,7 +22,6 @@ export default function Formulario(){
         'Qual seu Instagram',
         'Qual seu Facebook',
         'Qual seu Bairro?',
-
         'Em 2024 teremos eleições para Prefeito e Vereadores. Se a eleição para PREFEITO fosse hoje, em quem o(a) sr(a) votaria para Prefeito de MANAUS? (ESPONTÂNEA – CASO NÃO ENCONTRE NA LISTA MARQUE “OUTROS”) '
         
     ]);
@@ -36,7 +35,7 @@ export default function Formulario(){
 
     const [cpfInv, setCpfInv] = useState(false)
 
-    // const [disco, setDisco] = useState(false)
+    const [disco, setDisco] = useState(false)
 
     const handleClose = () =>{
         
@@ -71,6 +70,7 @@ export default function Formulario(){
 
       // Verifica se a pergunta atual é referente ao CPF
       if (indicePerguntaAtual === 1) { // Supondo que o CPF seja a segunda pergunta, como no seu código
+        console.log("entrou na funcao")
         const cpfValido = ValidarCPF(respostaAtual); // Valida o CPF inserido
         if (!cpfValido) {
           // Se o CPF for inválido, faça algo, por exemplo, exiba um aviso
@@ -81,7 +81,7 @@ export default function Formulario(){
       }
 
 
-      if (indicePerguntaAtual === 8){
+      if (indicePerguntaAtual === 7){
         setDisco(true)
       }
 
@@ -334,7 +334,7 @@ export default function Formulario(){
 
 }
 
-{/* {disco &&
+{disco &&
 
 <Alert key={'warning'} variant={'warning'} >
  Mostre ao intrevistado o disco com os nomes dos cadidatos!
@@ -342,7 +342,7 @@ export default function Formulario(){
 
 
 
-} */}
+}
 
 
         </Layout>
